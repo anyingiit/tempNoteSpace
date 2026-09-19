@@ -3,9 +3,10 @@
 
 # TempNoteSpace
 
-Temp note space: no README or manifest to go on; based on its name, this looks like a personal project — open the repository to confirm.
+An archived personal-notes repository containing four short Chinese-language study notes on multithreading concepts (atomic operations, mutexes, deadlocks, and thread safety), with no source code, package manifest, or build configuration of any kind.
 
-[![CI](https://github.com/anyingiit/tempNoteSpace/actions/workflows/ci.yml/badge.svg)](https://github.com/anyingiit/tempNoteSpace/actions/workflows/ci.yml)
+**English** · [简体中文](README.zh-CN.md)
+
 [![License](https://img.shields.io/github/license/anyingiit/tempNoteSpace)](LICENSE)
 
 [Report a bug](https://github.com/anyingiit/tempNoteSpace/issues/new?template=bug_report.yml) · [Request a feature](https://github.com/anyingiit/tempNoteSpace/issues/new?template=feature_request.yml)
@@ -24,17 +25,19 @@ Temp note space: no README or manifest to go on; based on its name, this looks l
 
 ## About The Project
 
-Temp note space: no README or manifest to go on; based on its name, this looks like a personal project — open the repository to confirm.
+TempNoteSpace is one of anyingiit's personal repositories, now archived. Its entire content is four short Markdown notes, written in Chinese, kept under a single directory whose name translates as "multithreading" (see the `Usage` section below for the exact, byte-for-byte file names). The first note explains atomic types as a modifier that makes a variable's reads and writes indivisible, with `atomic<int>` (C++) and `AtomicInteger` (Java) as examples, and closes with a shorter restatement below a divider. The second explains a mutex's locked and unlocked states, points to `std::mutex` (C++) and `ReentrantLock` (Java), and cross-references the fourth note. The third defines deadlock with a two-thread, two-lock example. The fourth distinguishes a programmer-implemented lock from an OS-level mutex and defines thread safety using a shared account-balance example, again followed by a divider and a restatement.
 
-See the [open issues](https://github.com/anyingiit/tempNoteSpace/issues) for planned features and known issues.
+There is no application code, dependency manifest, or build configuration alongside the notes, and `facts.json`'s `manifests` and `entry_points` are both empty.
 
 ## Getting Started
 
 ### Prerequisites
 
-- Git
+- A text editor or Markdown viewer able to display Chinese (Simplified) text; the repository has no package manifest, dependency list, or build configuration of any kind.
 
 ### Installation
+
+There is no build step and nothing to install. Cloning the repository gets you a local copy of the notes:
 
 ```sh
 git clone https://github.com/anyingiit/tempNoteSpace.git
@@ -43,8 +46,13 @@ cd tempNoteSpace
 
 ## Usage
 
+Open one of the four notes in your editor to read it:
+
 ```sh
-tempNoteSpace --help
+$EDITOR 多线程/什么是atomic.md
+$EDITOR 多线程/什么是mutex.md
+$EDITOR 多线程/什么是死锁.md
+$EDITOR "多线程/锁 互斥 线程安全.md"
 ```
 
 ## Contributing
